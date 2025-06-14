@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team UNIVERSE ⸙ - Members</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .member-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .member-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      width: 260px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    .member-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .member-details {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ddd;
+    }
+  </style>
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </head>
 <body>
   <!-- Top Bar -->
@@ -30,24 +64,113 @@
     <div class="container">
       <h2>Guild Members</h2>
       <div class="member-grid">
-        <div class="member-card"><h3>UNS SP7 ⸙</h3><p>Guild Leader</p></div>
-        <div class="member-card"><h3>UNS PSYCHO ⸙</h3><p>Acting Leader</p></div>
-        <div class="member-card"><h3>UNS RAJESH ⸙</h3></div>
-        <div class="member-card"><h3>UNS SOHEL ⸙</h3></div>
-        <div class="member-card"><h3>UNS MANU ⸙</h3></div>
-        <div class="member-card"><h3>UNS VAMSI ⸙</h3></div>
-        <div class="member-card"><h3>UNS FENNY ⸙</h3></div>
-        <div class="member-card"><h3>UNS NIHAS ⸙</h3></div>
-        <div class="member-card"><h3>UNS LOKI ⸙</h3></div>
-        <div class="member-card"><h3>UNS SP18 ⸙</h3></div>
-        <div class="member-card"><h3>Phanendra_YT</h3></div>
+        <!-- Repeat Card for Each Member -->
+        <div class="member-card" onclick="toggleDetails('sp7')">
+          <h3>UNS SP7 ⸙</h3><p>Guild Leader</p>
+          <div id="sp7" class="member-details">
+            <p><strong>Real Name:</strong> Phanendra</p>
+            <p><strong>Free Fire ID:</strong> 1410444636</p>
+            <p><strong>Phone:</strong> +91 8019297233</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('psycho')">
+          <h3>UNS PSYCHO ⸙</h3><p>Acting Leader</p>
+          <div id="psycho" class="member-details">
+            <p><strong>Real Name:</strong> Chakradhar</p>
+            <p><strong>Free Fire ID:</strong> 854794484</p>
+            <p><strong>Phone:</strong> +91 9182278122</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('rajesh')">
+          <h3>UNS RAJESH ⸙</h3>
+          <div id="rajesh" class="member-details">
+            <p><strong>Real Name:</strong> Rajesh</p>
+            <p><strong>Free Fire ID:</strong> 2912893229</p>
+            <p><strong>Phone:</strong> +91 8688136475</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('sohel')">
+          <h3>UNS SOHEL ⸙</h3>
+          <div id="sohel" class="member-details">
+            <p><strong>Real Name:</strong> Sohel Patan</p>
+            <p><strong>Free Fire ID:</strong> 2418264901</p>
+            <p><strong>Phone:</strong> +91 7559159790</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('manu')">
+          <h3>UNS MANU ⸙</h3>
+          <div id="manu" class="member-details">
+            <p><strong>Real Name:</strong> Mani Mala</p>
+            <p><strong>Free Fire ID:</strong> 2368739625</p>
+            <p><strong>Phone:</strong> +91 8341883185</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('vamsi')">
+          <h3>UNS VAMSI ⸙</h3>
+          <div id="vamsi" class="member-details">
+            <p><strong>Real Name:</strong> Vamsi Krishna</p>
+            <p><strong>Free Fire ID:</strong> 1879467231</p>
+            <p><strong>Phone:</strong> +91 8886228904</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('fenny')">
+          <h3>UNS FENNY ⸙</h3>
+          <div id="fenny" class="member-details">
+            <p><strong>Real Name:</strong> Sumanth</p>
+            <p><strong>Free Fire ID:</strong> 9486050853</p>
+            <p><strong>Phone:</strong> N/A</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('nihas')">
+          <h3>UNS NIHAS ⸙</h3>
+          <div id="nihas" class="member-details">
+            <p><strong>Real Name:</strong> Nihas</p>
+            <p><strong>Free Fire ID:</strong> 1596084548</p>
+            <p><strong>Phone:</strong> +91 7989301403</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('loki')">
+          <h3>UNS LOKI ⸙</h3>
+          <div id="loki" class="member-details">
+            <p><strong>Real Name:</strong> Loki</p>
+            <p><strong>Free Fire ID:</strong> 2374570625</p>
+            <p><strong>Phone:</strong> N/A</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('sp18')">
+          <h3>UNS SP18 ⸙</h3>
+          <div id="sp18" class="member-details">
+            <p><strong>Real Name:</strong> Sai Pranay</p>
+            <p><strong>Free Fire ID:</strong> 1078831059</p>
+            <p><strong>Phone:</strong> +91 9494838284</p>
+          </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('phanendra')">
+          <h3>Phanendra_YT</h3>
+          <div id="phanendra" class="member-details">
+            <p><strong>Real Name:</strong> Phanendra</p>
+            <p><strong>Free Fire ID:</strong> 1140436695</p>
+            <p><strong>Phone:</strong> +91 9182278122</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Team UNIVERSE</p>
+    <p>© 2025 Team UNIVERSE ⸙</p>
   </footer>
 </body>
 </html>
