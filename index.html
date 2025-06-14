@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNIVERSE Guild | FAMILY BEYOND BLOOD!</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIVERSE Guild | Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Fullscreen Hero Section -->
-  <header class="hero">
-    <div class="overlay">
-      <nav class="navbar">
-        <div class="logo">UNIVERSE</div>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="members.html">Members</a></li>
-          <li><a href="tournaments.html">Tournaments</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="hero-text">
-        <h1>UNIVERSE</h1>
-        <p class="tagline">FAMILY BEYOND BLOOD!</p>
-        <p class="leaders">Leader: <strong>UNS SP7 ⸙</strong> | Acting Leader: <strong>UNS PSYCHO ⸙</strong></p>
-        <a href="https://chat.whatsapp.com/G9krQgL2qs1CzVW17bDgz9" class="btn">Join WhatsApp</a>
-      </div>
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="announcement">Welcome to UNIVERSE Guild - FAMILY BEYOND BLOOD!</div>
+      <div class="currency">Server: India 🇮🇳</div>
     </div>
   </header>
 
-  <!-- Intro Section -->
-  <section class="intro">
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="container">
-      <h2>Welcome to UNIVERSE</h2>
-      <p>We are more than a team – we're a family. Built on trust, teamwork, and pure skill, UNIVERSE is one of the strongest Free Fire guilds in the community. We dominate with unity, strategy, and spirit. 🔥</p>
+      <div class="logo">UNIVERSE</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="https://chat.whatsapp.com/G9krQgL2qs1CzVW17bDgz9" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner" style="background-image: url('assets/images/bg-hero.jpg');">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1>UNIVERSE GUILD</h1>
+        <p>FAMILY BEYOND BLOOD!</p>
+        <a href="members.html" class="btn">Meet Our Squad</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guild Members Showcase -->
+  <section class="collection-section">
+    <div class="container">
+      <h2>Featured Members</h2>
+      <p class="count">10 Members</p>
+
+      <div class="toolbar">
+        <button class="sort"><i class="fas fa-sort"></i> Sort</button>
+        <button class="filter"><i class="fas fa-filter"></i> Filter</button>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <img src="assets/images/sp7.jpg" alt="UNS SP7" />
+          <div class="info">
+            <h3>UNS SP7</h3>
+            <p>Guild Leader</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/psycho.jpg" alt="UNS PSYCHO" />
+          <div class="info">
+            <h3>UNS PSYCHO</h3>
+            <p>Acting Leader</p>
+          </div>
+        </div>
+        <!-- Add other members similarly -->
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 UNIVERSE Guild. All rights reserved.</p>
-    <a href="https://chat.whatsapp.com/G9krQgL2qs1CzVW17bDgz9" target="_blank">Join Our WhatsApp Group</a>
+    <div class="container">
+      <p>© 2025 UNIVERSE Guild. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://chat.whatsapp.com/G9krQgL2qs1CzVW17bDgz9" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>
