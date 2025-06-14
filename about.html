@@ -5,6 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Team UNIVERSE</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-section {
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .about-section p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 16px;
+      text-align: justify;
+      color: #ccc;
+    }
+
+    .tagline {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: #ff4757;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    /* Responsive Nav */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 100;
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    }
+  </script>
 </head>
 <body>
   <!-- Top Bar -->
@@ -17,6 +80,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">TEAM UNIVERSE</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="members.html">Members</a></li>
@@ -26,23 +90,23 @@
   </nav>
 
   <!-- About Section -->
-  <section class="collection-section">
+  <section class="about-section">
     <div class="container">
       <h2>About Team UNIVERSE</h2>
       <p>
         <strong>Team UNIVERSE ⸙</strong> is not just a guild — it’s a family. Built on trust, discipline, and coordination, we have grown into one of the strongest Free Fire communities.
         <br /><br />
-        Under the leadership of <strong>UNS SP7 ⸙</strong> and dynamic support of all team members, we rise together as warriors beyond the screen. From rank pushes to competitive tournaments, every step we take reflects unity and loyalty.
+        Under the leadership of <strong>UNS SP7 ⸙</strong> and with the dynamic support of all team members, we rise together as warriors beyond the screen. From rank pushes to competitive tournaments, every step we take reflects unity and loyalty.
         <br /><br />
-        Whether you're a rusher, sniper, or strategist — there's a place for you in UNIVERSE.
+        Whether you're a rusher, sniper, or strategist — there's a place for you in UNIVERSE. Join us, grow with us, and stand tall as a proud warrior of our family.
       </p>
-      <blockquote class="tagline">FAMILY BEYOND BLOOD!</blockquote>
+      <div class="tagline">FAMILY BEYOND BLOOD!</div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Team UNIVERSE </p>
+    <p>© 2025 Team UNIVERSE</p>
   </footer>
 </body>
 </html>
