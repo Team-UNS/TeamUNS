@@ -1,4 +1,4 @@
-/* Reset & Base */
+
 * {
   margin: 0;
   padding: 0;
@@ -110,7 +110,7 @@ body {
 /* Section */
 .collection-section {
   padding: 60px 20px;
-  background: #111;
+  background: #0d0d0d;
   text-align: center;
 }
 
@@ -188,5 +188,13 @@ body {
   .btn {
     font-size: 14px;
     padding: 8px 18px;
+  }
+
+  .collection-section h2 {
+    font-size: 28px;
+  }
+
+  .collection-section p {
+    font-size: 15px;
   }
 }
