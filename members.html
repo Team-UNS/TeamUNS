@@ -11,6 +11,7 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
+      padding-bottom: 30px;
     }
     .member-card {
       background: rgba(255, 255, 255, 0.05);
@@ -32,11 +33,42 @@
       font-size: 14px;
       color: #ddd;
     }
+
+    /* Responsive Nav */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 100;
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
   </style>
   <script>
     function toggleDetails(id) {
       const details = document.getElementById(id);
       details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleMenu() {
+      document.querySelector('.nav-menu').classList.toggle('active');
     }
   </script>
 </head>
@@ -51,6 +83,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">TEAM UNIVERSE</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="members.html" class="active">Members</a></li>
@@ -64,7 +97,7 @@
     <div class="container">
       <h2>Guild Members</h2>
       <div class="member-grid">
-        <!-- Repeat Card for Each Member -->
+        <!-- Cards -->
         <div class="member-card" onclick="toggleDetails('sp7')">
           <h3>UNS SP7 ⸙</h3><p>Guild Leader</p>
           <div id="sp7" class="member-details">
@@ -170,7 +203,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Team UNIVERSE ⸙</p>
+    <p>© 2025 Team UNIVERSE</p>
   </footer>
 </body>
 </html>
